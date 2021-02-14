@@ -11,7 +11,7 @@ public class CardOrderTest {
     void shouldSubmitValidation() {
         open("http://localhost:9999/");
         $("[data-test-id=name] input").setValue("Васильев Евгений");
-        $("[data-test-id=phone] input").setValue("+79270000000");
+        $("[data-test-id=phone] input").setValue("ТЕСТ");
         $("[data-test-id=agreement]").click();
         $("button").click();
         $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
